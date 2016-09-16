@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="br.com.hacklab.mapasculturais" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Mapas Culturais</name>
+<widget id="br.com.campanhacompleta.acidadeesua" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>A Cidade é Sua</name>
   <description>
-        Aplicativo da Plataforma Mapas Culturais.
+       Agenda colaborativa de ações emergentes da campanha do Haddad para eleições municipais de 2016.
     </description>
-  <author email="contato@hacklab.com.br" href="http://hacklab.com.br/">
-      hacklab/
+  <author email="contato@campanhacompleta.com.br" href="http://campanhacompleta.com.br/">
+      Campanha Completa
     </author>
   <content src="index.html"/>
   <access origin="*"/>

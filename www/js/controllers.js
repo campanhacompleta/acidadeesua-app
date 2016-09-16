@@ -320,9 +320,7 @@ angular.module('mapasculturais.controllers', [])
                         var pin = {
                             title: space.name,
                             snippet: 
-                                "endereço: " + space.endereco + "\n" +
-                                "tipo: " + space.type.name + "\n" +
-                                "área de atuação: " + space.terms.area.join(', '),
+                                "endereço: " + space.endereco + "\n",
                             visible: true,
                             position: new plugin.google.maps.LatLng(
                                 space.location.latitude,

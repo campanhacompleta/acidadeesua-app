@@ -18,11 +18,21 @@ angular.module('mapasculturais.services', [])
 .service('ConfigState', function($localStorage, $location) {
     // Change fixedPrefix variable below to disable interface for choosing datasource.
     // Used for mantaining a fork that communicates with only one installation
-    this.fixedPrefix = null;
+    this.fixedPrefix = 'acidadeesua';
 
     this.dataSourceConfigurable = this.fixedPrefix == null;
 
     this.dataSources = {
+        'acidadeesua': {
+            prefix: 'acidadeesua',
+            name: 'A Cidade é Sua',
+            url: 'http://acidadeesua.campanhacompleta.com.br/',
+            map: {
+                latitude: -23.5408,
+                longitude: -46.6400,
+                zoom: 11
+            }
+        },
         'spcultura': {
             prefix: 'spcultura',
             name: 'SP Cultura',

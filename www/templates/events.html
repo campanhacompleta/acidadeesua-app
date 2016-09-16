@@ -36,8 +36,6 @@
                     <div class="information">
                         <p ng-if="::entity.project.id"><span class="label">Projeto:</span> <a ui-sref="menu.project({entity:entity.project.id})" class="link-project">{{::entity.project.name}}</a></p>
                         <p><span ng-if="::entity.rule.price" class="label">Preço:</span> {{::entity.rule.price}}</p>
-                        <p><span class="label">Classificação:</span> <span class="classificacao {{::classificacao(entity)}}">{{::entity.classificacaoEtaria}}</span></p>
-                        <p><span class="label">Linguagem:</span> {{::entity.terms.linguagem.join(', ')}}</p>
                     </div>
 
                 </ion-item>
