@@ -26,7 +26,8 @@ angular.module('mapasculturais.services', [])
         'acidadeesua': {
             prefix: 'acidadeesua',
             name: 'A Cidade é Sua',
-            url: 'http://acidadeesua.campanhacompleta.com.br/',
+            url: 'http://45.79.178.113/',
+            //url: 'http://acidadeesua.campanhacompleta.com.br/',
             map: {
                 latitude: -23.5408,
                 longitude: -46.6400,
@@ -253,11 +254,13 @@ angular.module('mapasculturais.services', [])
         this.dataSource = this.dataSources[prefix];
     }
 
+    if (!$localStorage.config)
+        $localStorage.config = {};
+
     if (this.dataSourceConfigurable) {
         if($localStorage.config){
             this.dataSource = this.dataSources[$localStorage.config.dataSource];
         } else {
-            $localStorage.config = {};
             this.defineDataSource(this.dataSources[Object.keys(this.dataSources)[0]].prefix);
         }
     } else {
