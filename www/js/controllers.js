@@ -217,9 +217,7 @@ angular.module('mapasculturais.controllers', [])
                     params['term:area'] = $IN($scope.filters.area);
                 }
 
-                if($scope.filters.type){
-                    params['type'] = $IN($scope.filters.type);
-                }
+                params['type'] = $IN([10]);
 
                 _page++;
 
