@@ -26,8 +26,7 @@ angular.module('mapasculturais.services', [])
         'acidadeesua': {
             prefix: 'acidadeesua',
             name: 'A Cidade é Sua',
-            url: 'http://45.79.178.113/',
-            //url: 'http://acidadeesua.campanhacompleta.com.br/',
+            url: 'http://acidadeesua.campanhacompleta.com.br/',
             map: {
                 latitude: -23.5408,
                 longitude: -46.6400,
