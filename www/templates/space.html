@@ -52,7 +52,15 @@
                             
                             <div class="information">
                                 <p ng-if="::event.project.id"><span class="label">Projeto:</span> <a ui-sref="menu.project({entity:event.project.id})" class="link-project">{{::event.project.name}}</a></p>
-                                <p><span class="label">Data:</span> {{::event.start.format('LL')}} das {{::event.start.format('HH:mm')}} às {{::event.end.format('HH:mm')}}</p>
+                                <p>
+                                  <span class="label">Data:</span>
+                                  <span ng-if="!event.start.isSame(event.end)">
+                                    {{::event.start.format('LL')}} das {{::event.start.format('HH:mm')}} às {{::event.end.format('HH:mm')}}
+                                  </span>
+                                  <span ng-if="event.start.isSame(event.end)">
+                                    {{::event.start.format('LL')}} às {{::event.start.format('HH:mm')}}
+                                  </span>
+                                </p>
                                 <p><span ng-if="::event.rule.price" class="label">Preço:</span> {{::event.rule.price}}</p>
                             </div>
 

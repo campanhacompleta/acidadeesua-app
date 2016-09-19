@@ -29,7 +29,16 @@
                     <ion-list>
                         <ion-item ng-repeat="event in group.events">
                             <ul class="ocurrences">
-                                <li><a ui-sref="menu.space({entity:event.space.id})" class="link-space">{{::event.space.name}}</a>, {{::event.start.format('LL')}} das {{::event.start.format('HH:mm')}} às {{::event.end.format('HH:mm')}}, {{::event.space.endereco}}, <strong>{{::event.rule.price}}</strong></li>
+                              <li>
+                                <a ui-sref="menu.space({entity:event.space.id})" class="link-space">{{::event.space.name}}</a>,
+                                <span ng-if="!entity.start.isSame(entity.end)">
+                                  {{::entity.start.format('LL')}} das {{::entity.start.format('HH:mm')}} às {{::entity.end.format('HH:mm')}}
+                                </span>
+                                <span ng-if="entity.start.isSame(entity.end)">
+                                  {{::entity.start.format('LL')}} às {{::entity.start.format('HH:mm')}}
+                                </span>
+                                <strong>{{::event.rule.price}}</strong>
+                              </li>
                             </ul>
                             <a ng-click="favorite(event)" class="make-favorite">
                                 <i ng-show="::event.favorite" class="elegant-icon icon-favorited"></i>

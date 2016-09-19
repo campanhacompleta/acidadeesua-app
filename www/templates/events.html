@@ -26,8 +26,17 @@
                         <span ng-bind-html="::entity.shortDescription"></span>
                     </div>
                     
-                    <ul class="ocurrences"><li><a ui-sref="menu.space({entity:entity.space.id})" class="link-space">{{::entity.space.name}}</a>,
-                    {{::entity.start.format('LL')}} das {{::entity.start.format('HH:mm')}} às {{::entity.end.format('HH:mm')}}</li></ul>
+                    <ul class="ocurrences">
+                      <li>
+                        <a ui-sref="menu.space({entity:entity.space.id})" class="link-space">{{::entity.space.name}}</a>,
+                        <div ng-if="!entity.start.isSame(entity.end)">
+                        {{::entity.start.format('LL')}} das {{::entity.start.format('HH:mm')}} às {{::entity.end.format('HH:mm')}}
+                        </div>
+                        <div ng-if="entity.start.isSame(entity.end)">
+                        {{::entity.start.format('LL')}} às {{::entity.start.format('HH:mm')}}
+                        </div>
+                      </li>
+                    </ul>
                     
                     <div ng-if="entity.isVerified" class="information">
                         <span class="label"> este evento é verificado</span>
