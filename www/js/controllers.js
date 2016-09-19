@@ -388,7 +388,7 @@ angular.module('mapasculturais.controllers', [])
         };
         
         $scope.clearFavorites = function () {
-            if (confirm('Você está certo de que deseja apagar todos os seus eventos favoritados?'))
+            if (confirm('Você está certo de que deseja apagar todos as suas ações favoritadas?'))
                 FavoriteEvents.clear();
         };
     })
