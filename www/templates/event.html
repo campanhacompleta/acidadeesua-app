@@ -18,7 +18,6 @@
                 </div>
                 
                 <p ng-if="::entity.project.id"><span class="label">Projeto:</span> <a ui-sref="menu.project({entity:entity.project.id})" class="link-project">{{::entity.project.name}}</a></p>
-                <p><span class="label">Publicado por:</span> <a ui-sref="menu.agent({entity: entity.owner.id})" class="link-agent">{{::entity.owner.name}}</a></p>
             </div>
 
             <div class="spaces" ng-if="entity.id" ng-controller="eventsCtrl" ng-init="findFunction = 'findByEvent'; findEntityId = entity.id">
